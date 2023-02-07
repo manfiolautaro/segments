@@ -1,0 +1,22 @@
+<template>
+        <p>Componente que muestra los criterios utilizando lightning-layout y lightning-layout-item</p>
+    <div class="slds-box slds-p-around_none slds-m-top_x-small slds-m-bottom_medium slds-m-horizontal_none">
+        <lightning-layout class = "custom-box2">
+          <template for:each={criteriaList.data} for:item="criteria">
+            <lightning-layout-item key = {criteria.Id} padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{criteria.FieldName__c}</div>
+            </lightning-layout-item>
+           
+            <lightning-layout-item key = {criteria.Id} padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{criteria.Operator__c}</div>
+            </lightning-layout-item>
+            <lightning-layout-item key = {criteria.Id} padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">{criteria.Value__c}</div>
+            </lightning-layout-item>
+           <!--  <lightning-layout-item key = {criteria.Id} padding="around-small">
+                <div class="custom-box slds-box slds-p-around_medium slds-text-align_center">4</div>
+            </lightning-layout-item> -->
+             </template>
+        </lightning-layout>
+    </div>
+</template>

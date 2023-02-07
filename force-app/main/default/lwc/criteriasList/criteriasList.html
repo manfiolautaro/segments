@@ -1,0 +1,18 @@
+<!-- sldsValidatorIgnore -->
+
+
+<template>
+    <div style="height: 300px;" class="slds-box">
+        <lightning-datatable
+                key-field="Id"
+                data={criteriaList.data}
+                columns={columns}
+                show-row-number-column
+                hide-checkbox-column
+                onclick={debugFields}
+                slds-box>
+        </lightning-datatable>
+    </div>
+</template>
+
+<!-- sldsValidatorIgnoreNextLine -->
